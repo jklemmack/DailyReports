@@ -1,11 +1,25 @@
 'use strict';
 
-angular.module('myApp', ['ui.compat', 'myApp.Recipe'])
-	.config(['$stateProvider', function($stateProvider) {
-				
+angular.module('myApp', ['myApp.data', 'myApp.DailyReports', 'myApp.DailyReports.Journal'])
+	.config(['$routeProvider', function($routeProvider) {
+
+        var x = 2;
+        
+        $routeProvider
+        .when('/Report', {
+            templateUrl: 'app/DailyReport/list.html',
+            controller: 'DailyReportsListController'
+        })
+        .when('/Report/:project/:date', {
+            templateUrl: 'app/DailyReport/detail.html',
+            controller: 'DailyReportsDetailController'            
+        })
+        
+        .when('/Report/:project/:date/Journal/:time', {
+            templateUrl: 'app/DailyReport/Journal/detail.html',
+            controller: 'JournalDetailController'            
+        })
+        
+        .otherwise({ redirectTo: '/Report' });
+        
 	}]);
-/*.run(['$rootScope', '$state', '$stateParams',
-function ($rootScope, $state, $stateParams) {
-$rootScope.$state = $state;
-$rootScope.$stateParams = $stateParams;
-}])*/

@@ -4,14 +4,18 @@
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/font-awesome.css">
 		<link rel="stylesheet" href="css/app.css" />
+        
 		<script type="application/javascript" src="lib/jquery.js"></script>
 		<script type="application/javascript" src="lib/bootstrap.js"></script>
 		<script type="application/javascript" src="js/index.js"></script>
 		<script type="application/javascript" src="lib/angular.js"></script>
 		<script type="application/javascript" src="lib/angular-ui-router.js"></script>
-		<script type="application/javascript" src="app/app.js"></script>
-		<!--<script type="application/javascript" src="app/RecipeService.js"></script>-->
-		<script type="application/javascript" src="app/Recipe/RecipeController.js"></script>
+		
+        <script type="application/javascript" src="app/app.js"></script>		
+        <script type="application/javascript" src="app/dataService.js"></script>
+        <script type="application/javascript" src="app/DailyReport/DailyReportController.js"></script>
+        <script type="application/javascript" src="app/DailyReport/Journal/JournalController.js"></script>
+        
 		<script type="application/javascript">
 			if (!('contains' in String.prototype))
 				String.prototype.contains = function(str, startIndex) {
@@ -19,63 +23,18 @@
 			};
 		</script>
 	</head>
-	<body ng-controller="RecipeList">
-		<!--<div class="navbar navbar-default navbar-fixed-top">
+	<!--<body>
+		<div class="navbar navbar-default navbar-fixed-top">
         <div class="row">
         <div class="col-xs-3">Left</div>
         <div class="col-xs-6 text-center">Header</div>
         <div class="col-xs-3 text-right">
         <div class="badge">5</div>Right</div>
         </div>
-        </div>-->
-		<div class="container max-height no-overflow">
-			<div class="row max-height">
-				<div class="col-left scrollable">
-					<div>
-						<input type="search" class="form-control" placeholder="Search" ng-model="filter" />
-					</div>
-					<div class="list-group">
-						<a class="list-group-item" ng-repeat="cat in filteredCategories">
-							<span class="badge">{{cat.count}}</span>{{cat.name}}</a>
-					</div>
-				</div>
-				<div class="col-body scrollable" ng-switch on="view">
-					<!-- List view of recipes -->
-					<div class="list-group" ng-switch-when="list">
-						<a class="list-group-item" ng-repeat="recipe in filteredRecipes" ng-click="SelectRecipe(recipe)">
-							<h2>{{recipe.title}}</h2>
-							<span style="overflow-x: hidden; overflow-y: hidden;">{{recipe.flavorText}}</span>
-						</a>
-					</div>
-					<!-- Detail view of recipes -->
-					<div ng-switch-when="view">
-						<button type="button" class="btn btn-primary" ng-click="GoBack();">
-							<i class="icon-backward"></i>&nbsp;Back</button>
-						<div class="row">
-							<h1>{{selectedRecipe.title}}</h1>
-						</div>
-						<div class="row">
-							<div class="col-sm-4">Prep Time:
-								<br />Cook Time:</div>
-							<div class="col-sm-8">
-								<i>{{selectedRecipe.flavorText}}</i>
-							</div>
-						</div>
-						<br />
-						<div class="row">
-							<div class="panel panel-primary">
-								<div class="panel-heading">
-									<h3 class="panel-title">Ingredients</h3>
-								</div>
-								<div class="panel-body"></div>
-							</div>
-						</div>
-					</div>
-					<!-- end of detail view -->
-				</div>
-				<!-- end of right body -->
-			</div>
-		</div>
-	</body>
-
+        </div>
+	</body>-->
+    <body>
+        <div id="body" ng-view>
+	   </div>
+    </body>
 </html>

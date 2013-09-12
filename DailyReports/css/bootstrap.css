@@ -746,8 +746,9 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+    /* JDK */
+  padding-right: 10px; 
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -847,8 +848,8 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .col-xs-1,
