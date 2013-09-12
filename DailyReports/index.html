@@ -7,7 +7,6 @@
         
 		<script type="application/javascript" src="lib/jquery.js"></script>
 		<script type="application/javascript" src="lib/bootstrap.js"></script>
-		<script type="application/javascript" src="js/index.js"></script>
 		<script type="application/javascript" src="lib/angular.js"></script>
 		<script type="application/javascript" src="lib/angular-ui-router.js"></script>
 		
@@ -23,18 +22,14 @@
 			};
 		</script>
 	</head>
-	<!--<body>
-		<div class="navbar navbar-default navbar-fixed-top">
-        <div class="row">
-        <div class="col-xs-3">Left</div>
-        <div class="col-xs-6 text-center">Header</div>
-        <div class="col-xs-3 text-right">
-        <div class="badge">5</div>Right</div>
-        </div>
-        </div>
-	</body>-->
+    
     <body>
         <div id="body" ng-view>
-	   </div>
+	    </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
     </body>
 </html>
