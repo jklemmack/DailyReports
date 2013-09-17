@@ -1,52 +1,25 @@
 <div class="navbar navbar-default navbar-fixed-top container">
     <div class="row">
-        <div class="col-xs-3 navbar-left"><button class="btn btn-default">Cancel</button></div>
+        <div class="col-xs-3 navbar-left"><button class="btn btn-default" ng-click="goToList();">Cancel</button></div>
         <div class="col-xs-6 text-center navbar-center" >Journal</div>
-        <div class="col-xs-3 text-right navbar-right"><button class="btn btn-default">Done</button></div>
+        <div class="col-xs-3 text-right navbar-right"><button class="btn btn-default" ng-click="saveJournalEntry();">Done</button></div>
     </div>
 </div>
-<div class="container">
-    <div class="container">
-        <textarea></textarea>
-        <p></p> 
-        Pictures<br>
-        <button class="btn btn-primary" ng-click="capturePhoto();"><i class="icon-camera"></i> Camera</button>
-        <button class="btn btn-primary"><i class="icon-picture"></i> Photo Album</button>
-        <div class="row">
-        <div class="col-xs-11">
-            <img ng-src="{{imgSrc}}">            
-        </div>
-            <div class="col-xs-1"><i class="icon-remove"></i></div>
-        </div>
-        
-<!--        <div class="row listrow">
-            <div class="col-xs-6"><i class="icon-file-text-alt"></i> Journal            </div>
-            <div class="col-xs-1"><i class="icon-warning-sign" style="color: goldenrod;"></i></div>
-            <div class="col-xs-1">1</div>
-            <div class="col-xs-1"><i class="icon-angle-right"></i></div>
-            <div class="col-xs-3 text-center break" >+</div>
-        </div>
-        <div class="row listrow">
-            <div class="col-xs-6"><i class="icon-cloud"></i> Weather</div>
-            <div class="col-xs-1"></div>
-            <div class="col-xs-1">2</div>
-            <div class="col-xs-1"><i class="icon-angle-right"></i></div>
-            <div class="col-xs-3 text-center break" >+</div>
-        </div>
-        <div class="row listrow">
-            <div class="col-xs-6"><i class="icon-camera"></i> Photo</div>
-            <div class="col-xs-1"><i class="icon-refresh" style="color: darkgrey;"></i></div>
-            <div class="col-xs-1">43</div>
-            <div class="col-xs-1"><i class="icon-angle-right"></i></div>
-            <div class="col-xs-3 text-center break" >+</div>
-        </div>
-        <div class="row listrow">
-            <div class="col-xs-7"><i class="icon-wrench"></i> Manpower</div>
+<div class="container" >
+    <textarea style="width: 100%;" rows="6"></textarea>
+    <p></p> 
+    Pictures<br>
+    <button class="btn btn-primary" ng-click="capturePhoto();"><i class="icon-camera"></i> Camera</button>
+    <button class="btn btn-primary" ng-click="captureFromAlbum();"><i class="icon-picture"></i> Photo Album</button>
 
+    <div>
+        <div class="row" ng-repeat="photo in photos">
+            <div class="col-xs-11">
+                <img ng-src="{{photo.imageData}}" style="width: 100%;">
+            </div>
+            <div class="col-xs-1">
+                <i class="icon-remove"></i>
+            </div>
         </div>
-        <div class="row listrow">
-            <div class="col-xs-7"><i class="icon-user"></i> Visitor</div>
-        </div>-->
-
     </div>
 </div>

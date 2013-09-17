@@ -20,6 +20,16 @@ angular.module('myApp.data', [])
             });
         };
         
+        factory.saveReport = function(data)
+        {
+            reports = data;
+        }
+        
+        factory.saveJournal = function(data)
+        {
+            
+        }
+        
         return factory;
     }])
 

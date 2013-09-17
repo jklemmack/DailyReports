@@ -14,7 +14,12 @@ angular.module('myApp', ['myApp.data', 'myApp.DailyReports', 'myApp.DailyReports
             templateUrl: 'app/DailyReport/detail.html',
             controller: 'DailyReportsDetailController'            
         })
-        
+
+        .when('/Report/:project/:date/Journal', {
+            templateUrl: 'app/DailyReport/Journal/list.html',
+            controller: 'JournalListController'            
+        })
+
         .when('/Report/:project/:date/Journal/:time', {
             templateUrl: 'app/DailyReport/Journal/detail.html',
             controller: 'JournalDetailController'            

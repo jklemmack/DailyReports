@@ -1,20 +1,38 @@
 'use strict';
 
 angular.module('myApp.DailyReports.Journal', [])
-	.controller('JournalListController', ['$scope', '$http', function ($scope, $http) {
+	.controller('JournalListController', ['$scope', '$http', '$location', function ($scope, $http, $location) {
 
-    }]);
+        $scope.goToDailyReport = function(){
+            var view = "/Report/123/20130911";
+            $location.path(view);
+        }
+        
+        $scope.goToAddJournal = function() {
+            var view = '/Report/123/20130911/Journal/1234';
+            $location.path(view);
+        }
+        
+    }])
 
-
-
-angular.module('myApp.DailyReports.Journal', [])
-    .controller('JournalDetailController', ['$scope', '$http', '$log', function ($scope, $http, $log) {
+    .controller('JournalDetailController', ['$scope', '$http', '$log', '$location', function ($scope, $http, $log, $location) {
 
         var pictureSource;   // picture source
         var destinationType; // sets the format of returned value 
         
         document.addEventListener("deviceready",onDeviceReady,false);
 
+        $scope.goToList = function() {
+            var view = '/Report/123/20130911';
+            $location.path(view);
+        }
+        
+        $scope.saveJournalEntry = function(){
+            $scope.goToList();
+        }
+        
+        $scope.photos = [];
+        
         // Cordova is ready to be used!
         function onDeviceReady() {
             pictureSource = navigator.camera.PictureSourceType;
@@ -23,23 +41,16 @@ angular.module('myApp.DailyReports.Journal', [])
         
         $scope.capturePhoto = function() {
             // Take picture using device camera and retrieve image as base64-encoded string
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL });
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 25, destinationType: destinationType.DATA_URL });
+        }
+        
+        $scope.captureFromAlbum = function() {
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL, sourceType: pictureSource.PHOTOLIBRARY })                        
         }
         
         function onPhotoDataSuccess(imageData) {
-            // Uncomment to view the base64 encoded image data
-             $log.info(imageData);
-    
-             // Get image handle
-             //var smallImage = document.getElementById('smallImage');
-    
-             // Unhide image elements
-             //smallImage.style.display = 'block';
-    
-             // Show the captured photo
-             // The inline CSS rules are used to resize the image
-             //smallImage.src = "data:image/jpeg;base64," + imageData;
-            $scope.imgSrc = "data:image/jpeg;base64," + imageData;
+            $scope.photos.push({"id": $scope.photos.length, "imageData" : "data:image/jpeg;base64," + imageData});
+            $scope.$digest();            
         }
             
          // Called if something bad happens.
