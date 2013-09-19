@@ -33,6 +33,16 @@ angular.module('myApp.DailyReports', ['myApp.data'])
             var view = '/Report/123/20130911/Journal/1234';
             $location.path(view);
         }
+        
+        $scope.goToWeatherList = function() {
+            var view = '/Report/123/20130911/Weather';
+            $location.path(view);
+        }
+        
+        $scope.goToAddWeather = function() {
+            //var view = '/Report/123/20130911/Weather/1234';
+            //$location.path(view);
+        }
     }
 ])
 
