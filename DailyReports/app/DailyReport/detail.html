@@ -67,11 +67,15 @@
                 <div class="col-xs-3 text-center break" >+</div>
             </div>
         </a>
-        <a class="list-group-item" >
+        <a class="list-group-item" ng-click="goToManpowerList();" >
             <div class="row bigrow">
-                <div class="col-xs-7">
+                <div class="col-xs-6">
                     <i class="icon-wrench"></i> Manpower
                 </div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1">2</div>
+                <div class="col-xs-1"><i class="icon-angle-right"></i></div>
+                <div class="col-xs-3 text-center break"  ng-click="goToAddManpower(); $event.stopPropagation();" >+</div>
 
             </div>
         </a>

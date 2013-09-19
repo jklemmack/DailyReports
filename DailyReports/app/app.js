@@ -2,7 +2,7 @@
 
 angular.module('myApp', [
     'myApp.data', 'myApp.DailyReports', 'myApp.DailyReports.Journal'
-    , 'myApp.DailyReports.Weather', 'myApp.DailyReports.Photo'
+    , 'myApp.DailyReports.Weather', 'myApp.DailyReports.Photo', 'myApp.DailyReports.Manpower'
 ])
 .config([
     '$routeProvider', function($routeProvider) {
@@ -44,6 +44,16 @@ angular.module('myApp', [
         .when('/Report/:project/:date/Photo/:time', {
             templateUrl: 'app/DailyReport/Photo/detail.html',
             controller: 'PhotoDetailController'            
+        })
+        
+        /* Manpower */
+        .when('/Report/:project/:date/Manpower', {
+            templateUrl: 'app/DailyReport/Manpower/list.html',
+            controller: 'ManpowerListController'            
+        })
+        .when('/Report/:project/:date/Manpower/:time', {
+            templateUrl: 'app/DailyReport/Manpower/detail.html',
+            controller: 'ManpowerDetailController'            
         })
         
         .otherwise({ redirectTo: '/Report' });

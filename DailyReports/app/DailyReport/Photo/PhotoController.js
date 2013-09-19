@@ -3,7 +3,7 @@
 angular.module('myApp.DailyReports.Photo', [])
 	.controller('PhotoListController', ['$scope', '$location', function ($scope, $location) {
 
-        $scope.goToPhotoReport = function(){
+        $scope.goToDailyReport = function(){
             var view = "/Report/123/20130911";
             $location.path(view);
         }
