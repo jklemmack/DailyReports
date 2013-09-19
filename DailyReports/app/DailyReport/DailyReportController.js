@@ -33,6 +33,36 @@ angular.module('myApp.DailyReports', ['myApp.data'])
             var view = '/Report/123/20130911/Journal/1234';
             $location.path(view);
         }
+        
+        $scope.goToWeatherList = function() {
+            var view = '/Report/123/20130911/Weather';
+            $location.path(view);
+        }
+        
+        $scope.goToAddWeather = function() {
+            //var view = '/Report/123/20130911/Weather/1234';
+            //$location.path(view);
+        }
+        
+        $scope.goToPhotoList = function() {
+            var view = '/Report/123/20130911/Photo';
+            $location.path(view);
+        }
+        
+        $scope.goToAddPhoto = function() {
+            //var view = '/Report/123/20130911/Weather/1234';
+            //$location.path(view);
+        }
+        
+        $scope.goToManpowerList = function() {
+            var view = '/Report/123/20130911/Manpower';
+            $location.path(view);
+        }
+        
+        $scope.goToAddManpower = function() {
+            var view = '/Report/123/20130911/Manpower/1234';
+            $location.path(view);
+        }
     }
 ])
 

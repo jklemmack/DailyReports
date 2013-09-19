@@ -90,6 +90,10 @@ body, html{
     border-left: 1px solid #dddddd;
 }
 
+.form_label {
+    color: #aaaaaa;   
+}
+
 /* Non-responsive overrides
  *
  * Utilitze the following CSS to disable the responsive-ness of the container,
