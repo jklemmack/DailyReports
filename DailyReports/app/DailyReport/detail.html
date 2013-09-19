@@ -16,129 +16,136 @@
             Chadsworth Tower <i class="icon-angle-right" style="float: right;"></i>
         </a>
     </div>
-    Observations
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" value="">
-            I'm done
-        </label>
-    </div>
-    <div class="list-group">
-        <a class="list-group-item" ng-click="goToJournalList();" >
-            <div class="row bigrow">
-                <div class="col-xs-6">
-                    <i class="icon-file-text-alt"></i> Journal
-                </div>
-                <div class="col-xs-1">
-                    <i class="icon-warning-sign" style="color: goldenrod;"></i>
-                </div>
-                <div class="col-xs-1">1</div>
-                <div class="col-xs-1">
-                    <i class="icon-angle-right"></i>
-                </div>
-                <div class="col-xs-3 text-center break"  ng-click="goToAddJournal(); $event.stopPropagation();" >+</div>
+    <div class="row">
+        <div class="col-xs-6">Observations</div>
+        <div class="col-xs-6">
+            <div style="float: right; font-size: 20px;">
+            <i class="icon-check" style="color: green;"></i>&nbsp;I'm done
             </div>
-        </a>
-        <a class="list-group-item" ng-click="goToWeatherList();" >
-            <div class="row bigrow">
-                <div class="col-xs-6">
-                    <i class="icon-cloud"></i> Weather
-                </div>
-                <div class="col-xs-1"></div>
-                <div class="col-xs-1">2</div>
-                <div class="col-xs-1">
-                    <i class="icon-angle-right"></i>
-                </div>
-                <div class="col-xs-3 text-center break"  ng-click="goToAddWeather(); $event.stopPropagation();" >+</div>
-            </div>
-        </a>
-        <a class="list-group-item" ng-click="goToPhotoList();" >
-            <div class="row bigrow">
-                <div class="col-xs-6">
-                    <i class="icon-camera"></i> Photo
-                </div>
-                <div class="col-xs-1">
-                    <i class="icon-refresh" style="color: darkgrey;"></i>
-                </div>
-                <div class="col-xs-1">43</div>
-                <div class="col-xs-1">
-                    <i class="icon-angle-right"></i>
-                </div>
-                <div class="col-xs-3 text-center break" >+</div>
-            </div>
-        </a>
-        <a class="list-group-item" ng-click="goToManpowerList();" >
-            <div class="row bigrow">
-                <div class="col-xs-6">
-                    <i class="icon-wrench"></i> Manpower
-                </div>
-                <div class="col-xs-1"></div>
-                <div class="col-xs-1">2</div>
-                <div class="col-xs-1"><i class="icon-angle-right"></i></div>
-                <div class="col-xs-3 text-center break"  ng-click="goToAddManpower(); $event.stopPropagation();" >+</div>
-
-            </div>
-        </a>
-        <a class="list-group-item" >
-            <div class="row bigrow">
-                <div class="col-xs-7">
-                    <i class="icon-user"></i> Visitor
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <!--<div class="container">
-    <div class="row listrow">
-    <div class="col-xs-6">
-    <i class="icon-file-text-alt"></i> Journal
-    </div>
-    <div class="col-xs-1">
-    <i class="icon-warning-sign" style="color: goldenrod;"></i>
-    </div>
-    <div class="col-xs-1">1</div>
-    <div class="col-xs-1">
-    <i class="icon-angle-right" ng-click="goToJournalList();"></i>
-    </div>
-    <div class="col-xs-3 text-center break" ng-click="goToAddJournal();" >+</div>
-    </div>
-    <div class="row listrow">
-    <div class="col-xs-6">
-    <i class="icon-cloud"></i> Weather
-    </div>
-    <div class="col-xs-1"></div>
-    <div class="col-xs-1">2</div>
-    <div class="col-xs-1">
-    <i class="icon-angle-right"></i>
-    </div>
-    <div class="col-xs-3 text-center break" >+</div>
-    </div>
-    <div class="row listrow">
-    <div class="col-xs-6">
-    <i class="icon-camera"></i> Photo
-    </div>
-    <div class="col-xs-1">
-    <i class="icon-refresh" style="color: darkgrey;"></i>
-    </div>
-    <div class="col-xs-1">43</div>
-    <div class="col-xs-1">
-    <i class="icon-angle-right"></i>
-    </div>
-    <div class="col-xs-3 text-center break" >+</div>
-    </div>
-    <div class="row listrow">
-    <div class="col-xs-7">
-    <i class="icon-wrench"></i> Manpower
-    </div>
+        </div>
 
     </div>
-    <div class="row listrow">
-    <div class="col-xs-7">
-    <i class="icon-user"></i> Visitor
-    </div>
-    </div>
 
-    </div>
-    -->
+</div>
+
+<div class="list-group">
+    <a class="list-group-item" ng-click="goToJournalList();" >
+        <div class="row bigrow">
+            <div class="col-xs-6">
+                <i class="icon-file-text-alt"></i> Journal
+            </div>
+            <div class="col-xs-1">
+                <i class="icon-warning-sign" style="color: goldenrod;"></i>
+            </div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">
+                <i class="icon-angle-right"></i>
+            </div>
+            <div class="col-xs-3 text-center break"  ng-click="goToAddJournal(); $event.stopPropagation();" >+</div>
+        </div>
+    </a>
+    <a class="list-group-item" ng-click="goToWeatherList();" >
+        <div class="row bigrow">
+            <div class="col-xs-6">
+                <i class="icon-cloud"></i> Weather
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">
+                <i class="icon-angle-right"></i>
+            </div>
+            <div class="col-xs-3 text-center break"  ng-click="goToAddWeather(); $event.stopPropagation();" >+</div>
+        </div>
+    </a>
+    <a class="list-group-item" ng-click="goToPhotoList();" >
+        <div class="row bigrow">
+            <div class="col-xs-6">
+                <i class="icon-camera"></i> Photo
+            </div>
+            <div class="col-xs-1">
+                <i class="icon-refresh" style="color: darkgrey;"></i>
+            </div>
+            <div class="col-xs-1">43</div>
+            <div class="col-xs-1">
+                <i class="icon-angle-right"></i>
+            </div>
+            <div class="col-xs-3 text-center break" >+</div>
+        </div>
+    </a>
+    <a class="list-group-item" ng-click="goToManpowerList();" >
+        <div class="row bigrow">
+            <div class="col-xs-6">
+                <i class="icon-wrench"></i> Manpower
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">
+                <i class="icon-angle-right"></i>
+            </div>
+            <div class="col-xs-3 text-center break"  ng-click="goToAddManpower(); $event.stopPropagation();" >+</div>
+
+        </div>
+    </a>
+    <a class="list-group-item" >
+        <div class="row bigrow">
+            <div class="col-xs-7">
+                <i class="icon-user"></i> Visitor
+            </div>
+        </div>
+    </a>
+</div>
+
+<!--<div class="container">
+<div class="row listrow">
+<div class="col-xs-6">
+<i class="icon-file-text-alt"></i> Journal
+</div>
+<div class="col-xs-1">
+<i class="icon-warning-sign" style="color: goldenrod;"></i>
+</div>
+<div class="col-xs-1">1</div>
+<div class="col-xs-1">
+<i class="icon-angle-right" ng-click="goToJournalList();"></i>
+</div>
+<div class="col-xs-3 text-center break" ng-click="goToAddJournal();" >+</div>
+</div>
+<div class="row listrow">
+<div class="col-xs-6">
+<i class="icon-cloud"></i> Weather
+</div>
+<div class="col-xs-1"></div>
+<div class="col-xs-1">2</div>
+<div class="col-xs-1">
+<i class="icon-angle-right"></i>
+</div>
+<div class="col-xs-3 text-center break" >+</div>
+</div>
+<div class="row listrow">
+<div class="col-xs-6">
+<i class="icon-camera"></i> Photo
+</div>
+<div class="col-xs-1">
+<i class="icon-refresh" style="color: darkgrey;"></i>
+</div>
+<div class="col-xs-1">43</div>
+<div class="col-xs-1">
+<i class="icon-angle-right"></i>
+</div>
+<div class="col-xs-3 text-center break" >+</div>
+</div>
+<div class="row listrow">
+<div class="col-xs-7">
+<i class="icon-wrench"></i> Manpower
+</div>
+
+</div>
+<div class="row listrow">
+<div class="col-xs-7">
+<i class="icon-user"></i> Visitor
+</div>
+</div>
+
+</div>
+-->
 
 </div>

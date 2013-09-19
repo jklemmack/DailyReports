@@ -13,12 +13,12 @@ angular.module('myApp.DailyReports', ['myApp.data'])
             var view = '/Report/123/20130911';
             $location.path(view);
         }
+
     }
 ])
 
 .controller('DailyReportsDetailController', [
     '$scope', '$location', function ($scope, $location) {
-    
         $scope.goToList = function() {
             var view = '/Report';
             $location.path(view);
