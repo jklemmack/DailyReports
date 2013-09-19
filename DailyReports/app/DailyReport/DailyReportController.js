@@ -43,6 +43,16 @@ angular.module('myApp.DailyReports', ['myApp.data'])
             //var view = '/Report/123/20130911/Weather/1234';
             //$location.path(view);
         }
+        
+        $scope.goToPhotoList = function() {
+            var view = '/Report/123/20130911/Photo';
+            $location.path(view);
+        }
+        
+        $scope.goToAddPhoto = function() {
+            //var view = '/Report/123/20130911/Weather/1234';
+            //$location.path(view);
+        }
     }
 ])
 

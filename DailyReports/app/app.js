@@ -1,8 +1,11 @@
 'use strict';
 
-angular.module('myApp', ['myApp.data', 'myApp.DailyReports', 'myApp.DailyReports.Journal', 'myApp.DailyReports.Weather'])
-	.config(['$routeProvider', function($routeProvider) {
-        
+angular.module('myApp', [
+    'myApp.data', 'myApp.DailyReports', 'myApp.DailyReports.Journal'
+    , 'myApp.DailyReports.Weather', 'myApp.DailyReports.Photo'
+])
+.config([
+    '$routeProvider', function($routeProvider) {
         $routeProvider
         .when('/Report', {
             templateUrl: 'app/DailyReport/list.html',
@@ -33,7 +36,16 @@ angular.module('myApp', ['myApp.data', 'myApp.DailyReports', 'myApp.DailyReports
             controller: 'WeatherDetailController'            
         })
         
+        /* Photo */
+        .when('/Report/:project/:date/Photo', {
+            templateUrl: 'app/DailyReport/Photo/list.html',
+            controller: 'PhotoListController'            
+        })
+        .when('/Report/:project/:date/Photo/:time', {
+            templateUrl: 'app/DailyReport/Photo/detail.html',
+            controller: 'PhotoDetailController'            
+        })
         
         .otherwise({ redirectTo: '/Report' });
-        
-	}]);
+    }
+]);
