@@ -1,2 +1,2 @@
-FamilyRecipeBookApp
-===================
+Daily Reports Mockup App
+========================
