@@ -1,8 +1,11 @@
 'use strict';
 
-angular.module('myApp.DailyReports.Journal', [])
-	.controller('JournalListController', ['$scope', '$http', '$location', function ($scope, $http, $location) {
+angular.module('myApp.DailyReports.Journal', ['myApp.data'])
+	.controller('JournalListController', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
 
+        var project = $routeParams.project;
+        var date = $routeParams.date;
+        
         $scope.goToDailyReport = function(){
             var view = "/Report/123/20130911";
             $location.path(view);
@@ -15,19 +18,22 @@ angular.module('myApp.DailyReports.Journal', [])
         
     }])
 
-    .controller('JournalDetailController', ['$scope', '$http', '$log', '$location', function ($scope, $http, $log, $location) {
+    .controller('JournalDetailController', ['$scope', '$http', '$log', '$location', 'dataService', function ($scope, $http, $log, $location, dataService) {
 
         var pictureSource;   // picture source
         var destinationType; // sets the format of returned value 
         
         document.addEventListener("deviceready",onDeviceReady,false);
-
+        
+        $scope.isWarning = false;
+        
         $scope.goToList = function() {
             var view = '/Report/123/20130911';
             $location.path(view);
         }
         
         $scope.saveJournalEntry = function(){
+            dataService.saveJournal();
             $scope.goToList();
         }
         
@@ -55,6 +61,6 @@ angular.module('myApp.DailyReports.Journal', [])
             
          // Called if something bad happens.
         function onFail(message) {
-            alert('Failed because: ' + message);
+        //    alert('Failed because: ' + message);
         }
     }]);

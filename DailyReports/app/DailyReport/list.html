@@ -18,31 +18,12 @@
     </div>
     Daily Reports
     <div class="list-group">
-        <a class="list-group-item" ng-click="goToReport();" >
-            <div class="row">
-                <div class="col-xs-4">Sunday</div>
-                <div class="col-xs-5">9/11/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right">
-                    <i class="icon-angle-right"></i>
-                </div>
-            </div>
-        </a>
-        <a class="list-group-item" ng-click="goToReport();">
-            <div class="row">
-                <div class="col-xs-4">Saturday</div>
-                <div class="col-xs-5">9/10/2013</div>
-                <div class="col-xs-2"></div>
-                <div class="col-xs-1 text-right">
-                    <i class="icon-angle-right"></i>
-                </div>
-            </div>
-        </a>
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Friday</div>
-                <div class="col-xs-5">9/09/2013</div>
-                <div class="col-xs-2">16</div>
+                <div class="col-xs-4">9/09/2013</div>
+                <div class="col-xs-2 text-right">16</div>
+                <div class="col-xs-1"></div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -51,8 +32,9 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Thursday</div>
-                <div class="col-xs-5">9/08/2013</div>
-                <div class="col-xs-2">23</div>
+                <div class="col-xs-4">9/08/2013</div>
+                <div class="col-xs-2 text-right">23</div>
+                <div class="col-xs-1"></div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -61,8 +43,11 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Wednesday</div>
-                <div class="col-xs-5">9/07/2013</div>
-                <div class="col-xs-2">18</div>
+                <div class="col-xs-4">9/07/2013</div>
+                <div class="col-xs-2 text-right">18</div>
+                <div class="col-xs-1">
+                    <i class="icon-ok" style="color: green; font-size:18px;" ></i>
+                </div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -71,8 +56,11 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Tuesday</div>
-                <div class="col-xs-5">9/06/2013</div>
-                <div class="col-xs-2">44</div>
+                <div class="col-xs-4">9/06/2013</div>
+                <div class="col-xs-2 text-right">44</div>
+                <div class="col-xs-1">
+                    <i class="icon-ok" style="color: green; font-size:18px;" ></i>
+                </div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -81,8 +69,9 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Monday</div>
-                <div class="col-xs-5">9/05/2013</div>
-                <div class="col-xs-2">12</div>
+                <div class="col-xs-4">9/05/2013</div>
+                <div class="col-xs-2 text-right">12</div>
+                <div class="col-xs-1"></div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -92,8 +81,9 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Sunday</div>
-                <div class="col-xs-5">9/04/2013</div>
-                <div class="col-xs-2">2</div>
+                <div class="col-xs-4">9/04/2013</div>
+                <div class="col-xs-2 text-right">2</div>
+                <div class="col-xs-1"></div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -102,8 +92,9 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Saturday</div>
-                <div class="col-xs-5">9/03/2013</div>
-                <div class="col-xs-2">0</div>
+                <div class="col-xs-4">9/03/2013</div>
+                <div class="col-xs-2 text-right">0</div>
+                <div class="col-xs-1"></div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -112,8 +103,9 @@
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Friday</div>
-                <div class="col-xs-5">9/02/2013</div>
-                <div class="col-xs-2">18</div>
+                <div class="col-xs-4">9/02/2013</div>
+                <div class="col-xs-2 text-right">18</div>
+                <div class="col-xs-1"></div>
                 <div class="col-xs-1 text-right">
                     <i class="icon-angle-right"></i>
                 </div>
@@ -133,7 +125,7 @@
             </div>
             <div class="modal-body container">
                 <div class="list-group" style="font-size: 18px;">
-                    <a class="list-group-item" data-dismiss="modal">Today</a>
+                    <a class="list-group-item" ng-click="goToReport();">Today</a>
                     <a class="list-group-item" data-dismiss="modal">This Week</a>
                     <a class="list-group-item" data-dismiss="modal">Another Day...</a>
                     <a class="list-group-item" data-dismiss="modal">Another Week...</a>
