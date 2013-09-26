@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp.data', [])
-    .factory('dataService', ['$http', function($http) {
+    .factory('dataService', ['$http', 'utils', function($http, utils) {
         var path = 'js/data.js';
         
         var reports = $http.get(path).then(function(response) {
@@ -9,10 +9,13 @@ angular.module('myApp.data', [])
         });
         
         var factory = {};
+        
+        // Returns all reports
         factory.all = function () {
             return reports;
         };
         
+        // Returns only the report for the specified date
         factory.get = function(date)
         {
             return reports.then(function() {
@@ -20,6 +23,7 @@ angular.module('myApp.data', [])
             });
         };
         
+        // Saves the specified report
         factory.saveReport = function(data)
         {
             reports = data;

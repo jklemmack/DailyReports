@@ -2,71 +2,135 @@
     <div class="row">
         <div class="col-xs-3 navbar-left"></div>
         <div class="col-xs-6 text-center navbar-center" >Daily Reports</div>
-        <div class="col-xs-3 text-right navbar-right"></div>
+        <div class="col-xs-3 text-right navbar-right">
+            <a href="#selectDateModal" data-toggle="modal" class="btn btn-default">
+                <i class="icon-caret-down"></i>
+            </a>
+        </div>
     </div>
 </div>
+
 <div class="container">
     <div class="list-group">
-    <a class="list-group-item">Chadsworth Tower
-        <i class="icon-angle-right" style="float: right;"></i></a>
+        <a class="list-group-item">
+            Chadsworth Tower <i class="icon-angle-right" style="float: right;"></i>
+        </a>
     </div>
     Daily Reports
     <div class="list-group">
-        <a class="list-group-item" ng-click="goToReport();" >
-            <div class="row">
-                <div class="col-xs-4">Sunday</div>
-                <div class="col-xs-5">9/11/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
-            </div>
-        </a>
-        <a class="list-group-item" ng-click="goToReport();">
-            <div class="row">
-                <div class="col-xs-4">Saturday</div>
-                <div class="col-xs-5">9/10/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
-            </div>
-        </a>
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Friday</div>
-                <div class="col-xs-5">9/09/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
+                <div class="col-xs-4">9/09/2013</div>
+                <div class="col-xs-2 text-right">16</div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
             </div>
         </a>
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Thursday</div>
-                <div class="col-xs-5">9/08/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
+                <div class="col-xs-4">9/08/2013</div>
+                <div class="col-xs-2 text-right">23</div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
             </div>
         </a>
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Wednesday</div>
-                <div class="col-xs-5">9/07/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
+                <div class="col-xs-4">9/07/2013</div>
+                <div class="col-xs-2 text-right">18</div>
+                <div class="col-xs-1">
+                    <i class="icon-ok" style="color: green; font-size:18px;" ></i>
+                </div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
             </div>
         </a>
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Tuesday</div>
-                <div class="col-xs-5">9/06/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
+                <div class="col-xs-4">9/06/2013</div>
+                <div class="col-xs-2 text-right">44</div>
+                <div class="col-xs-1">
+                    <i class="icon-ok" style="color: green; font-size:18px;" ></i>
+                </div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
             </div>
         </a>
         <a class="list-group-item" ng-click="goToReport();">
             <div class="row">
                 <div class="col-xs-4">Monday</div>
-                <div class="col-xs-5">9/05/2013</div>
-                <div class="col-xs-2">4</div>
-                <div class="col-xs-1 text-right"><i class="icon-angle-right"></i></div>
+                <div class="col-xs-4">9/05/2013</div>
+                <div class="col-xs-2 text-right">12</div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
             </div>
         </a>
+
+        <a class="list-group-item" ng-click="goToReport();">
+            <div class="row">
+                <div class="col-xs-4">Sunday</div>
+                <div class="col-xs-4">9/04/2013</div>
+                <div class="col-xs-2 text-right">2</div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item" ng-click="goToReport();">
+            <div class="row">
+                <div class="col-xs-4">Saturday</div>
+                <div class="col-xs-4">9/03/2013</div>
+                <div class="col-xs-2 text-right">0</div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item" ng-click="goToReport();">
+            <div class="row">
+                <div class="col-xs-4">Friday</div>
+                <div class="col-xs-4">9/02/2013</div>
+                <div class="col-xs-2 text-right">18</div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 text-right">
+                    <i class="icon-angle-right"></i>
+                </div>
+            </div>
+        </a>
+
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal" id="selectDateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" >&times;</button>-->
+                <h4 class="modal-title text-center">Select Date</h4>
+            </div>
+            <div class="modal-body container">
+                <div class="list-group" style="font-size: 18px;">
+                    <a class="list-group-item" ng-click="goToReport();">Today</a>
+                    <a class="list-group-item" data-dismiss="modal">This Week</a>
+                    <a class="list-group-item" data-dismiss="modal">Another Day...</a>
+                    <a class="list-group-item" data-dismiss="modal">Another Week...</a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

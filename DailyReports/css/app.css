@@ -94,6 +94,10 @@ body, html{
     color: #aaaaaa;   
 }
 
+.disabled_warning {
+    
+}
+
 /* Non-responsive overrides
  *
  * Utilitze the following CSS to disable the responsive-ness of the container,

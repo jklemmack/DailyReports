@@ -2,23 +2,39 @@
 
 angular.module('myApp.DailyReports', ['myApp.data'])
 .controller('DailyReportsListController', [
-    '$scope','$location', 'dataService', function ($scope, $location, dataService) {
-        $scope.reports = dataService.all().then(function (reports) {
-            var start = '11/17/2013';
+    '$scope','$location', '$routeParams', 'dataService', function ($scope, $location, $routeParams, dataService) {
+
+        var project = $routeParams.project || 123;
+        var data = [];
+        
+        $scope.reports = dataService.all(project).then(function (reports) {
+            var start = '11/18/2013';
+            
+            //Start at date and work back 7 days
+            for(var i = 0; i < 7; i++)
+            {
+                var date = new Date(start).addDays(-1 * i);
+                var report = dataService.get(date);
+            }
             
             return reports;
         });
         
         $scope.goToReport = function() {
+            $("#selectDateModal").modal('hide');
+            
             var view = '/Report/123/20130911';
             $location.path(view);
         }
+
     }
 ])
 
 .controller('DailyReportsDetailController', [
     '$scope', '$location', function ($scope, $location) {
-    
+        
+        $scope.imdone = false;
+        
         $scope.goToList = function() {
             var view = '/Report';
             $location.path(view);
@@ -50,8 +66,8 @@ angular.module('myApp.DailyReports', ['myApp.data'])
         }
         
         $scope.goToAddPhoto = function() {
-            //var view = '/Report/123/20130911/Weather/1234';
-            //$location.path(view);
+            var view = '/Report/123/20130911/Photo/1234';
+            $location.path(view);
         }
         
         $scope.goToManpowerList = function() {
